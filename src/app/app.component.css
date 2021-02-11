@@ -1,13 +1,22 @@
 .parallax {
-    /* The image used */
-    background-image: url("/assets/Caribbean-beach.jpg");
   
-    /* Set a specific height */
-    min-height: 500px; 
+  background-image: url("../assets/bitcoin-3396302_960_720.webp");
+
+  height: 100%;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.header {
+  font-size: 70px;
+  color: gold;
+}
+.nav-link {
   
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+  
+  color: gold;
+}
+
+

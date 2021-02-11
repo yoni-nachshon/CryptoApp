@@ -1,5 +1,4 @@
-
-    <div class="card w-75">
+<div class="card w-75">
     <div class="card-body">
         <div class="row">
             <h4 class="card-title col">{{ coin.symbol }}</h4>
@@ -12,21 +11,24 @@
         <br>        
         <p>
             <button type="button" class="btn btn-primary"
+           
              (click)= "moreInfo(coin.id)">MoreInfo </button>
-        </p>
-       <div class="card" >
+            </p>
+            
+            <div class="card" >
                <div class="card-body" *ngIf="infoList.img">
                     <img src="{{infoList.img}}" alt="coin img">
         <div>
-            <span class="text-warning font-weight-bold">&#36;</span> {{infoList.usd}}
+             {{infoList.usd | currency: "USD"}}
              <br>
-            <span class="text-warning font-weight-bold">&#8364;</span> {{infoList.eur}}
+             {{infoList.eur | currency: "EUR"}}
              <br>
-            <span class="text-warning font-weight-bold">&#8362;</span> {{infoList.ils}}
+             {{infoList.ils | currency: "ILS"}}
+            </div>
              </div>
         </div>
     </div>
  </div>
 
-    
-
+ 
+ 

@@ -1,5 +1,6 @@
 import { Component,Input, OnInit } from '@angular/core';
-import { coinModel } from 'src/app/models/coin.model';
+import { coinInfoModel } from 'src/app/models/coin-info-model';
+import { coinsModel } from 'src/app/models/coins-model';
 import { DataService } from 'src/app/services/data.service';
 
 @Component({
@@ -9,12 +10,14 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class CoinComponent implements OnInit {
   @Input() coin;
-  infoList: coinModel = {img: null, usd: null, ils: null, eur: null, cache: 0}
+  infoList: coinInfoModel = {img: null, usd: null, ils: null, eur: null, cache: 0};
  
-  constructor(private dataService:DataService) { }
+ 
+
+  constructor(public dataService:DataService) { }
 
   ngOnInit(): void {
-    
+
   }
   moreInfo(id): void{
    if(Date.now() - this.infoList.cache > 120 * 1000){
@@ -26,9 +29,6 @@ export class CoinComponent implements OnInit {
               cache: Date.now()})});
       }
     }
+    
   }
 
-
-
-
- 

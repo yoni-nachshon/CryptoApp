@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { coinModel } from './models/coin.model';
+import { coinsModel } from './models/coins-model';
 import { DataService } from './services/data.service';
 
 @Component({
@@ -10,24 +10,13 @@ import { DataService } from './services/data.service';
 })
 export class AppComponent {
   title = 'crypto-app';
-  coinList = [];
-  
-  constructor(private dataService:DataService) { }
-   ngOnInit(): void {
-   }
-  search(symbol) {
+ 
+  constructor() { }
 
-    
-    
-    
-   
+  ngOnInit(): void {
   }
+
+ 
 }
-    
-  
-   
-      
-    
-  
 
 

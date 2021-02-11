@@ -1,5 +1,4 @@
-export interface coinModel {
-   
+export interface coinInfoModel {
     img: string,
     usd: number,
     ils: number,
