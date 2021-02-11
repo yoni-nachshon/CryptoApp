@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { coinsModel } from 'src/app/models/coins-model';
+import { coinsModel } from 'src/app/models/coin-model';
 import { DataService } from 'src/app/services/data.service';
 
 
@@ -17,8 +17,8 @@ export class SearchComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  search(coinId): void{
-    this.res = this.dataService.coinList.find(test => test.symbol == coinId);
+  search(symbol): void{
+    this.res = this.dataService.coins.find(coin => coin.symbol == symbol);
     if(this.res){
       this.searchInfo.symbol = this.res.symbol,
       this.searchInfo.name = this.res.name,

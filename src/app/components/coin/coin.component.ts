@@ -1,6 +1,5 @@
 import { Component,Input, OnInit } from '@angular/core';
 import { coinInfoModel } from 'src/app/models/coin-info-model';
-import { coinsModel } from 'src/app/models/coins-model';
 import { DataService } from 'src/app/services/data.service';
 
 @Component({
@@ -31,4 +30,3 @@ export class CoinComponent implements OnInit {
     }
     
   }
-

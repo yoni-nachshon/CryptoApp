@@ -1,4 +1,4 @@
-<div class="card w-75">
+<div class="card col">
     <div class="card-body">
         <div class="row">
             <h4 class="card-title col">{{ coin.symbol }}</h4>
@@ -17,18 +17,18 @@
             
             <div class="card" >
                <div class="card-body" *ngIf="infoList.img">
-                    <img src="{{infoList.img}}" alt="coin img">
-        <div>
-             {{infoList.usd | currency: "USD"}}
-             <br>
-             {{infoList.eur | currency: "EUR"}}
-             <br>
-             {{infoList.ils | currency: "ILS"}}
+                    <p><img src="{{infoList.img}}" alt="coin img"></p>
+        <div  style="font-size: 20px">
+            USD:
+            <p>{{infoList.usd | currency: "USD"}}</p> 
+             EUR:
+             <p>{{infoList.eur | currency: "EUR"}}</p>
+             ILS:
+             <p>{{infoList.ils | currency: "ILS"}} </p>
             </div>
              </div>
         </div>
     </div>
  </div>
 
- 
  

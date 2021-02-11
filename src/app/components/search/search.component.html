@@ -1,8 +1,8 @@
-<form class="d-flex my-1 mx-md-5" #mySearch="ngForm">
-    <input #coinId class="form-control me-2" type="search"
+<form class="d-flex my-1 mx-md-5">
+    <input #symbol class="form-control me-2" type="search"
      placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success ml-2" type="submit"
-     (click)="search(coinId.value)">Search</button>
+    <button class="btn btn-outline-success" type="submit"
+     (click)="search(symbol.value)">Search</button>
 </form>
 <app-coin [coin]="searchInfo" *ngIf="res"></app-coin>
 <div class="text-center" *ngIf="noRes">
