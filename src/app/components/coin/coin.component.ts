@@ -10,7 +10,9 @@ import { DataService } from 'src/app/services/data.service';
 export class CoinComponent implements OnInit {
   @Input() coin;
   infoList: coinInfoModel = {img: null, usd: null, ils: null, eur: null, cache: 0};
- 
+  isCollapsed = true;
+
+
  
 
   constructor(public dataService:DataService) { }

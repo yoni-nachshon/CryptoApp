@@ -11,24 +11,26 @@
         <br>        
         <p>
             <button type="button" class="btn btn-primary"
-           
-             (click)= "moreInfo(coin.id)">MoreInfo </button>
+            (click)="collapse.toggle(); moreInfo(coin.id);"
+              [attr.aria-expanded]="!isCollapsed"
+              aria-controls="collapseExample">
+            More info </button>
             </p>
-            
+            <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
             <div class="card" >
                <div class="card-body" *ngIf="infoList.img">
                     <p><img src="{{infoList.img}}" alt="coin img"></p>
         <div  style="font-size: 20px">
-            USD:
+            USD
             <p>{{infoList.usd | currency: "USD"}}</p> 
-             EUR:
+             EUR
              <p>{{infoList.eur | currency: "EUR"}}</p>
-             ILS:
+             ILS
              <p>{{infoList.ils | currency: "ILS"}} </p>
-            </div>
-             </div>
-        </div>
+          </div>
+       </div>
     </div>
- </div>
+  </div>
+</div>
 
  
