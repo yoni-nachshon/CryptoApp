@@ -10,6 +10,7 @@ import { tap } from 'rxjs/operators';
 export class DataService {
   private coinApi = "https://api.coingecko.com/api/v3/coins/"
   public coins = [];
+  public switchList: string[] = [];
 
   constructor(private httpClient: HttpClient) {   }
   get(): Observable<any>{

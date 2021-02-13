@@ -3,8 +3,11 @@
         <div class="row">
             <h4 class="card-title col">{{ coin.symbol }}</h4>
             <div class="custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input" id="{{coin.id}}">
-                <label class="custom-control-label" for="{{coin.id}}"></label>
+                <input type="checkbox" class="custom-control-input"
+                 id="{{coin.id}}">
+                <label class="custom-control-label"
+                 for="{{coin.id}}" ></label>
+                 
             </div>
         </div>
         <div> {{ coin.name }}</div>
@@ -18,6 +21,10 @@
             </p>
             <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
             <div class="card" >
+                <div class="card-body" *ngIf="!infoList.img">
+                    <div class="spinner-border text-info" role="status"></div>
+                    <div> <strong>Loading...</strong> </div>
+               </div>    
                <div class="card-body" *ngIf="infoList.img">
                     <p><img src="{{infoList.img}}" alt="coin img"></p>
         <div  style="font-size: 20px">

@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
   constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
-    for(let i = 0; i<100; i++){
+    for(let i = 0; i<50; i++){
       this.dataService.get().subscribe(info => {
         this.coinList.push({symbol: info[i].symbol,
            name: info[i].name, id: info[i].id})})

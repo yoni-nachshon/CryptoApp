@@ -10,6 +10,7 @@ import { HomeComponent } from './components/home/home.component';
 import { CoinComponent } from './components/coin/coin.component';
 import { AboutComponent } from './components/about/about.component';
 import { SearchComponent } from './components/search/search.component';
+import { LiveReportsComponent } from './components/live-reports/live-reports.component';
 
 
 
@@ -20,6 +21,7 @@ import { SearchComponent } from './components/search/search.component';
     CoinComponent,
     AboutComponent,
     SearchComponent,
+    LiveReportsComponent,
     
   
   ],

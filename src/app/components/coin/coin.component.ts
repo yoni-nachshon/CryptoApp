@@ -1,4 +1,5 @@
-import { Component,Input, OnInit } from '@angular/core';
+import { Component,Input, DoCheck, OnInit } from '@angular/core';
+import { NgbModal, NgbModalConfig } from '@ng-bootstrap/ng-bootstrap';
 import { coinInfoModel } from 'src/app/models/coin-info-model';
 import { DataService } from 'src/app/services/data.service';
 
@@ -8,15 +9,21 @@ import { DataService } from 'src/app/services/data.service';
   styleUrls: ['./coin.component.css']
 })
 export class CoinComponent implements OnInit {
+  [x: string]: any;
   @Input() coin;
   infoList: coinInfoModel = {img: null, usd: null, ils: null, eur: null, cache: 0};
   isCollapsed = true;
 
 
+  
+
+
  
 
-  constructor(public dataService:DataService) { }
-
+  constructor(public dataService:DataService) {
+    
+    }
+      
   ngOnInit(): void {
 
   }
@@ -30,5 +37,6 @@ export class CoinComponent implements OnInit {
               cache: Date.now()})});
       }
     }
+  
     
   }
