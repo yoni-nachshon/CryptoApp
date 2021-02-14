@@ -7,6 +7,7 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class HomeComponent implements OnInit {
   coinList = [];
+ 
 
   constructor(private dataService: DataService) { }
 
@@ -18,5 +19,5 @@ export class HomeComponent implements OnInit {
     }
     
   }
-
 }
+  

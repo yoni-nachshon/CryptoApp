@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { coinsModel } from './models/coin-model';
+import { coinsModel } from './models/coin.model';
 import { DataService } from './services/data.service';
 
 @Component({

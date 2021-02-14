@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { coinsModel } from 'src/app/models/coin-model';
+import { coinsModel } from 'src/app/models/coin.model';
 import { DataService } from 'src/app/services/data.service';
 
 

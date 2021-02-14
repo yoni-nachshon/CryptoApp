@@ -1,6 +1,8 @@
-import { Component,Input, DoCheck, OnInit } from '@angular/core';
+import { Component,Input, OnInit } from '@angular/core';
+import { Output, EventEmitter } from '@angular/core';
 import { NgbModal, NgbModalConfig } from '@ng-bootstrap/ng-bootstrap';
-import { coinInfoModel } from 'src/app/models/coin-info-model';
+import { coinInfoModel } from 'src/app/models/coin.info.model';
+import { coinsModel } from 'src/app/models/coin.model';
 import { DataService } from 'src/app/services/data.service';
 
 @Component({
@@ -15,18 +17,15 @@ export class CoinComponent implements OnInit {
   isCollapsed = true;
 
 
-  
-
-
- 
-
-  constructor(public dataService:DataService) {
-    
-    }
+  constructor(public dataService:DataService) { 
+    this.coinsList = this.coin;
+   }
       
   ngOnInit(): void {
 
   }
+
+ 
   moreInfo(id): void{
    if(Date.now() - this.infoList.cache > 120 * 1000){
         this.dataService.getInfo(id).subscribe(info => {
