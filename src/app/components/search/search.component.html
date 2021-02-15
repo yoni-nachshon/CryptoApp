@@ -5,6 +5,5 @@
      (click)="search(symbol.value)">Search</button>
 </form>
 <app-coin [coin]="searchInfo" *ngIf="res"></app-coin>
-<div class="text-center" *ngIf="noRes">
-    
-</div>
+ <!--To return to the list of currencies,
+ you must delete the search and click on the search button.-->

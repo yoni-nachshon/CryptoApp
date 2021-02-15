@@ -11,7 +11,7 @@ import { DataService } from 'src/app/services/data.service';
 export class SearchComponent implements OnInit {
   searchInfo: coinsModel = {symbol: null, name: null, id: null};
   res;
-  noRes = false;
+  
   constructor(public dataService:DataService) { }
 
   ngOnInit(): void {
@@ -22,11 +22,10 @@ export class SearchComponent implements OnInit {
     if(this.res){
       this.searchInfo.symbol = this.res.symbol,
       this.searchInfo.name = this.res.name,
-      this.searchInfo.id = this.res.id,
-      this.noRes = false
+      this.searchInfo.id = this.res.id;
+      
     }
-    else{
-      this.noRes = true
-    }
+  
+
   }
 }
